@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://dopmmbgrq00im"]
+
+[ext_resource type="Script" uid="uid://d1bjpmorsr770" path="res://script/player.gd" id="1_i722k"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_enqqn"]
+
+[node name="Player" type="CharacterBody2D"]
+script = ExtResource("1_i722k")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_enqqn")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(3, 3)
+
+[node name="ReloadTimer" type="Timer" parent="."]
+wait_time = 0.3
+one_shot = true

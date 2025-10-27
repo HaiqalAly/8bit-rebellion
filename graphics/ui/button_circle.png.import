@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://6j2he24a4uda"
-path="res://.godot/imported/l3.png-0d1d2eac492f4280a2e977f7e2850275.ctex"
+uid="uid://d38d6wuli0m7s"
+path="res://.godot/imported/button_circle.png-767074e822b930e50f00ef8d2d576bbf.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://graphics/lights/l3.png"
-dest_files=["res://.godot/imported/l3.png-0d1d2eac492f4280a2e977f7e2850275.ctex"]
+source_file="res://graphics/ui/button_circle.png"
+dest_files=["res://.godot/imported/button_circle.png-767074e822b930e50f00ef8d2d576bbf.ctex"]
 
 [params]
 

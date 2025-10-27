@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=3 uid="uid://bbwrk8c06v3dr"]
+
+[ext_resource type="PackedScene" uid="uid://dopmmbgrq00im" path="res://scenes/Entities/player.tscn" id="1_byklb"]
+[ext_resource type="Script" uid="uid://82yn2m7ykpaa" path="res://script/level.gd" id="1_muv8p"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0sda6"]
+size = Vector2(499, 272)
+
+[node name="Level" type="Node2D"]
+script = ExtResource("1_muv8p")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(360.5, 216)
+shape = SubResource("RectangleShape2D_0sda6")
+
+[node name="Entities" type="Node2D" parent="."]
+
+[node name="Player" parent="Entities" instance=ExtResource("1_byklb")]
+position = Vector2(395, 67)
+jump_strenght = 300
+gravity = 750
+
+[connection signal="shoot" from="Entities/Player" to="." method="_on_player_shoot"]

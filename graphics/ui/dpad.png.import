@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://6j2he24a4uda"
-path="res://.godot/imported/l3.png-0d1d2eac492f4280a2e977f7e2850275.ctex"
+uid="uid://cmai75vllebg4"
+path="res://.godot/imported/dpad.png-5f95292e4a00c77060c3d9c42aa93625.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://graphics/lights/l3.png"
-dest_files=["res://.godot/imported/l3.png-0d1d2eac492f4280a2e977f7e2850275.ctex"]
+source_file="res://graphics/ui/dpad.png"
+dest_files=["res://.godot/imported/dpad.png-5f95292e4a00c77060c3d9c42aa93625.ctex"]
 
 [params]
 
