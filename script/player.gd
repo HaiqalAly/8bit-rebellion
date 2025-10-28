@@ -14,7 +14,7 @@ func get_input():
 	if Input.is_action_just_pressed("jump"):
 		velocity.y = -jump_strenght
 	if Input.is_action_just_pressed("shoot") and $ReloadTimer.time_left == 0:
-		shoot.emit(position, Vector2.RIGHT)
+		emit_signal("shoot", global_position, (get_global_mouse_position() - global_position).normalized())
 		$ReloadTimer.start()
 		
 func apply_gravity(delta):
