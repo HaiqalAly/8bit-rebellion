@@ -1,9 +1,11 @@
-[gd_scene load_steps=9 format=3 uid="uid://dopmmbgrq00im"]
+[gd_scene load_steps=10 format=3 uid="uid://dopmmbgrq00im"]
 
 [ext_resource type="Script" uid="uid://d1bjpmorsr770" path="res://script/player.gd" id="1_i722k"]
 [ext_resource type="Texture2D" uid="uid://de5wf7al0hknv" path="res://graphics/characters/player.png" id="2_r47wa"]
+[ext_resource type="Texture2D" uid="uid://otyoj5px7yk7" path="res://graphics/ui/crosshair.png" id="3_jqi8p"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_enqqn"]
+height = 28.0
 
 [sub_resource type="Animation" id="Animation_chgf7"]
 length = 0.001
@@ -107,3 +109,7 @@ position = Vector2(0, -9)
 texture = ExtResource("2_r47wa")
 hframes = 8
 vframes = 3
+
+[node name="Crosshair" type="Sprite2D" parent="."]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_jqi8p")

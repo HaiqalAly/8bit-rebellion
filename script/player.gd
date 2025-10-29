@@ -26,6 +26,10 @@ func get_input():
 	if Input.is_action_just_pressed("shoot") and $ReloadTimer.time_left == 0:
 		emit_signal("shoot", global_position, (get_global_mouse_position() - global_position).normalized())
 		$ReloadTimer.start()
+		$Crosshair.scale = Vector2(0.5, 0.5)
+		var tween = get_tree().create_tween()
+		tween.tween_property($Crosshair, "scale", Vector2(0.1, 0.1), 0.2)
+		tween.tween_property($Crosshair, "scale", Vector2(0.5, 0.5), 0.3).set_ease(Tween.EASE_OUT)
 		
 func apply_gravity(delta):
 	velocity.y += gravity * delta
@@ -46,3 +50,5 @@ func animation():
 	var raw_direction = get_global_mouse_position() - global_position
 	var adjusted_dir = Vector2i(round(raw_direction.normalized().x), round(raw_direction.normalized().y))
 	$Torso.frame = gun_direction[adjusted_dir]
+	
+	$Crosshair.position = (get_global_mouse_position() - global_position) * 1
