@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://bbwrk8c06v3dr"]
+[gd_scene load_steps=5 format=3 uid="uid://bbwrk8c06v3dr"]
 
 [ext_resource type="PackedScene" uid="uid://dopmmbgrq00im" path="res://scenes/Entities/player.tscn" id="1_byklb"]
 [ext_resource type="Script" uid="uid://82yn2m7ykpaa" path="res://script/level.gd" id="1_muv8p"]
+[ext_resource type="Texture2D" uid="uid://dhnpk44jpfnl0" path="res://icon.svg" id="2_tc7dm"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0sda6"]
 size = Vector2(499, 272)
@@ -15,12 +16,15 @@ script = ExtResource("1_muv8p")
 position = Vector2(360.5, 216)
 shape = SubResource("RectangleShape2D_0sda6")
 
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D"]
+position = Vector2(358.5, 216.5)
+scale = Vector2(3.8828125, 2.1015625)
+texture = ExtResource("2_tc7dm")
+
 [node name="Entities" type="Node2D" parent="."]
 
 [node name="Player" parent="Entities" instance=ExtResource("1_byklb")]
 position = Vector2(395, 67)
-jump_strenght = 300
-gravity = 750
 
 [node name="Bullet" type="Node2D" parent="."]
 
