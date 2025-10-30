@@ -1,11 +1,11 @@
 extends CharacterBody2D
 
 var direction_x: float
-var speed := 50
+var speed := 70
 @export var jump_strenght := 350
 @export var gravity := 600
 var can_shoot := true
-const SHOOT_COOLDOWN := 0.5
+const SHOOT_COOLDOWN := 0.3
 const gun_direction = {
 	Vector2i(1,0):   0,
 	Vector2i(1,1):   1,
@@ -42,7 +42,7 @@ func _physics_process(delta: float) -> void:
 	animation()
 	
 func animation():
-	$Legs.flip_h = direction_x  < 0
+	$Legs.flip_h = direction_x < 0
 	if is_on_floor():
 		$AnimationPlayer.current_animation = 'run' if direction_x else 'idle'
 	else:
