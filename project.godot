@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="8bit rebeliion"
-run/main_scene="uid://bbwrk8c06v3dr"
+run/main_scene="uid://nion36xn482j"
 config/features=PackedStringArray("4.5", "GL Compatibility")
 config/icon="res://icon.svg"
 
