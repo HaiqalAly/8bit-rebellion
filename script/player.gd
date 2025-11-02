@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
 var direction_x: float
-var speed := 70
+var speed := 100
 @export var jump_strenght := 350
 @export var gravity := 600
 var can_shoot := true

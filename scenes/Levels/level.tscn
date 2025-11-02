@@ -1,9 +1,10 @@
-[gd_scene load_steps=15 format=4 uid="uid://nion36xn482j"]
+[gd_scene load_steps=16 format=4 uid="uid://nion36xn482j"]
 
 [ext_resource type="PackedScene" uid="uid://dopmmbgrq00im" path="res://scenes/Entities/player.tscn" id="1_377w7"]
 [ext_resource type="Script" uid="uid://82yn2m7ykpaa" path="res://script/level.gd" id="1_muv8p"]
 [ext_resource type="Texture2D" uid="uid://c7v0ifpdabs2i" path="res://graphics/tilesets/subway.png" id="3_b2cq8"]
 [ext_resource type="Texture2D" uid="uid://cgh7234wked4l" path="res://graphics/tilesets/walls.png" id="3_xb4v1"]
+[ext_resource type="PackedScene" uid="uid://d1ppiryuhrukx" path="res://scenes/Entities/drones.tscn" id="5_fsqur"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_urvlt"]
 texture = ExtResource("3_b2cq8")
@@ -3761,7 +3762,10 @@ tile_set = SubResource("TileSet_ouxo3")
 [node name="Entities" type="Node2D" parent="."]
 
 [node name="Player" parent="Entities" instance=ExtResource("1_377w7")]
-position = Vector2(2550, 794)
+position = Vector2(2051, 779)
+
+[node name="Drones" parent="Entities" instance=ExtResource("5_fsqur")]
+position = Vector2(2338, 724)
 
 [node name="Bullets" type="Node2D" parent="."]
 
